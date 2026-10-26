@@ -1,0 +1,6 @@
+{
+  "name": "Kinetik Studio - Digital Experience & Engineering",
+  "description": "Studio desain antarmuka, rekayasa web modern, dan produk digital berstandar global.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

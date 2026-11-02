@@ -23,8 +23,8 @@ export function Footer({ currentLang }: FooterProps) {
               href="#"
               className="text-xl font-bold tracking-tight text-white flex items-center"
             >
-              <span>Kinetik</span>
-              <span className="text-blue-500 font-black">.</span>
+              <span>Laudya</span>
+              <span className="text-blue-500 font-extrabold ml-1">Kanzora.</span>
             </a>
             <p className="text-neutral-400 text-xs leading-relaxed max-w-sm">
               {content.about}

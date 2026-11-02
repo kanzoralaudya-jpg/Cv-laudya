@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronRight, Layers, Sparkles } from 'lucide-react';
+import { ArrowRight, ChevronRight, GraduationCap, CheckCircle2 } from 'lucide-react';
 import { siteContent, Language } from '../data/content';
 
 interface HeroProps {
@@ -11,7 +11,7 @@ export function Hero({ currentLang, onExploreWork, onOpenEstimator }: HeroProps)
   const content = siteContent[currentLang].hero;
 
   return (
-    <section className="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+    <section className="relative pt-10 pb-20 md:pt-16 md:pb-28 overflow-hidden">
       {/* Background radial atmosphere */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-blue-600/10 blur-[130px] rounded-full pointer-events-none -z-10" />
       <div className="absolute top-1/3 right-10 w-[350px] h-[350px] bg-indigo-500/5 blur-[100px] rounded-full pointer-events-none -z-10" />
@@ -19,24 +19,30 @@ export function Hero({ currentLang, onExploreWork, onOpenEstimator }: HeroProps)
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Subtle kicker text - unboxed, clean typography */}
         <div className="flex items-center gap-2 mb-6 text-xs text-blue-400 font-semibold tracking-wider uppercase">
+          <GraduationCap className="w-4 h-4 text-blue-400" />
           <span>{content.badge}</span>
           <span aria-hidden="true" className="text-neutral-600">·</span>
-          <span className="text-neutral-400 normal-case tracking-normal">Jakarta &amp; Global Delivery</span>
+          <span className="text-neutral-400 normal-case tracking-normal">
+            {currentLang === 'id' ? 'Sistem Informasi & Rekayasa Perangkat Lunak' : 'Information Systems & Software Engineering'}
+          </span>
         </div>
 
         {/* Split grid: Headline & Value Proposition on Left, Visual Carrier on Right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           <div className="lg:col-span-7 space-y-6">
-            <h1
-              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]"
-              style={{ textWrap: 'balance' }}
-            >
-              {content.headlineStart}{' '}
-              <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-300 bg-clip-text text-transparent">
-                {content.headlineAccent}
-              </span>{' '}
-              {content.headlineEnd}
-            </h1>
+            <div className="space-y-2">
+              <h1
+                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]"
+                style={{ textWrap: 'balance' }}
+              >
+                Laudya Salbech Kanzora
+              </h1>
+              <p className="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-300 bg-clip-text text-transparent">
+                {currentLang === 'id'
+                  ? 'Mahasiswa Program Studi Sistem Informasi'
+                  : 'Information Systems Undergraduate'}
+              </p>
+            </div>
 
             <p className="text-base sm:text-lg text-neutral-300 max-w-2xl leading-relaxed">
               {content.subhead}
@@ -67,54 +73,57 @@ export function Hero({ currentLang, onExploreWork, onOpenEstimator }: HeroProps)
             <div className="pt-4 flex flex-wrap items-center gap-y-2 gap-x-4 text-xs text-neutral-400">
               <div className="flex items-center gap-1.5">
                 <span className="text-blue-400 font-bold">✓</span>
-                <span>Garansi Bebas Bug 60 Hari</span>
+                <span>{currentLang === 'id' ? 'Analisis Sistem & BPMN 2.0' : 'Systems Analysis & BPMN'}</span>
               </div>
               <span aria-hidden="true" className="text-neutral-700">·</span>
               <div className="flex items-center gap-1.5">
                 <span className="text-blue-400 font-bold">✓</span>
-                <span>100% Kepemilikan Kode &amp; Aset</span>
+                <span>{currentLang === 'id' ? 'Web Modern React 19 & TypeScript' : 'React 19 & TypeScript'}</span>
               </div>
               <span aria-hidden="true" className="text-neutral-700">·</span>
               <div className="flex items-center gap-1.5">
                 <span className="text-blue-400 font-bold">✓</span>
-                <span>NDA &amp; Keamanan Terjamin</span>
+                <span>{currentLang === 'id' ? 'Basis Data Relasional & Normalisasi 3NF' : 'Relational 3NF Database'}</span>
               </div>
             </div>
           </div>
 
-          {/* Right Visual Carrier: Studio Showcase Frame */}
+          {/* Right Visual Carrier: Portrait Frame of Laudya Salbech Kanzora */}
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl bg-neutral-900 group">
-              {/* Media element with fallback */}
-              <div className="relative aspect-[16/10] sm:aspect-[16/11] lg:aspect-[4/3] w-full overflow-hidden bg-neutral-900">
+              <div className="relative aspect-square w-full overflow-hidden bg-neutral-900">
                 <img
-                  src="/src/assets/images/hero_modern_studio_1792985088037.jpg"
-                  alt="Kinetik Modern Studio Architecture & Engineering Workspace"
+                  src="/src/assets/images/laudya_profile_portrait_1793590870617.jpg"
+                  alt="Laudya Salbech Kanzora - Mahasiswa Program Studi Sistem Informasi"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
-                    // Fallback to styled SVG representation if image fails
                     const target = e.currentTarget;
                     target.style.display = 'none';
                     if (target.parentElement) {
                       target.parentElement.innerHTML = `
                         <div class="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-neutral-900 to-neutral-800 p-8 text-center">
-                          <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                          <div class="w-14 h-14 rounded-2xl bg-blue-600/20 text-blue-400 flex items-center justify-center mb-4">
+                            <span class="text-xl font-bold">LSK</span>
                           </div>
-                          <p class="text-sm font-semibold text-white">Kinetik Engineering Lab</p>
-                          <p class="text-xs text-neutral-400 mt-1">Jakarta · World Class Architecture</p>
+                          <p class="text-base font-bold text-white">Laudya Salbech Kanzora</p>
+                          <p class="text-xs text-neutral-400 mt-1">Mahasiswa Program Studi Sistem Informasi</p>
                         </div>
                       `;
                     }
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/20 to-transparent pointer-events-none" />
-                
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-950/20 to-transparent pointer-events-none" />
+
                 {/* Clean unboxed image overlay caption */}
-                <div className="absolute bottom-3 left-4 right-4 text-xs text-neutral-300 flex items-center justify-between">
-                  <span className="font-medium">Studio Rekayasa &amp; Desain Produk</span>
-                  <span className="text-neutral-400">Jakarta Pusat</span>
+                <div className="absolute bottom-4 left-5 right-5 text-xs text-neutral-200 flex items-center justify-between">
+                  <div>
+                    <span className="font-bold text-white block">Laudya Salbech Kanzora</span>
+                    <span className="text-neutral-400 text-[11px]">Mahasiswa Prodi Sistem Informasi</span>
+                  </div>
+                  <span className="text-[11px] font-mono text-blue-400 bg-neutral-900/80 px-2 py-1 rounded border border-neutral-800">
+                    IPK 3.91
+                  </span>
                 </div>
               </div>
             </div>

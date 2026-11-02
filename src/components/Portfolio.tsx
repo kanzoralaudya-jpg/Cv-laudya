@@ -8,7 +8,7 @@ interface PortfolioProps {
 
 export function Portfolio({ currentLang }: PortfolioProps) {
   const content = siteContent[currentLang].work;
-  const [activeFilter, setActiveFilter] = useState<'all' | 'saas' | 'ecommerce' | 'fintech'>('all');
+  const [activeFilter, setActiveFilter] = useState<'all' | 'systems' | 'web' | 'uiux'>('all');
   const [selectedCase, setSelectedCase] = useState<CaseStudy | null>(null);
 
   const filteredCases =
@@ -48,36 +48,36 @@ export function Portfolio({ currentLang }: PortfolioProps) {
             </button>
             <button
               type="button"
-              onClick={() => setActiveFilter('saas')}
+              onClick={() => setActiveFilter('systems')}
               className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap cursor-pointer ${
-                activeFilter === 'saas'
+                activeFilter === 'systems'
                   ? 'bg-blue-600 text-white'
                   : 'text-neutral-400 hover:text-white'
               }`}
             >
-              SaaS &amp; Analitik
+              {currentLang === 'id' ? 'Sistem Informasi' : 'Information Systems'}
             </button>
             <button
               type="button"
-              onClick={() => setActiveFilter('ecommerce')}
+              onClick={() => setActiveFilter('web')}
               className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap cursor-pointer ${
-                activeFilter === 'ecommerce'
+                activeFilter === 'web'
                   ? 'bg-blue-600 text-white'
                   : 'text-neutral-400 hover:text-white'
               }`}
             >
-              E-Commerce
+              {currentLang === 'id' ? 'Web App & DB' : 'Web App & DB'}
             </button>
             <button
               type="button"
-              onClick={() => setActiveFilter('fintech')}
+              onClick={() => setActiveFilter('uiux')}
               className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap cursor-pointer ${
-                activeFilter === 'fintech'
+                activeFilter === 'uiux'
                   ? 'bg-blue-600 text-white'
                   : 'text-neutral-400 hover:text-white'
               }`}
             >
-              Fintech
+              {currentLang === 'id' ? 'UI/UX & Desain' : 'UI/UX & Design'}
             </button>
           </div>
         </div>

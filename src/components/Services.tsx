@@ -131,7 +131,7 @@ export function Services({ currentLang }: ServicesProps) {
                 <span>{currentLang === 'id' ? 'Inspektur Standar Rekayasa' : 'Engineering Standard Inspector'}</span>
               </div>
               <h4 className="text-lg font-bold text-white">
-                {currentLang === 'id' ? 'Spesifikasi Arsitektur Produksi Kinetik' : 'Kinetik Production Architecture Blueprint'}
+                {currentLang === 'id' ? 'Standar & Metodologi Rekayasa Sistem Laudya Salbech Kanzora' : 'Laudya Salbech Kanzora Systems & Engineering Standards'}
               </h4>
             </div>
 

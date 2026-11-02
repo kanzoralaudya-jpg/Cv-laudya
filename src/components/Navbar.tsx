@@ -28,10 +28,10 @@ export function Navbar({ currentLang, onToggleLang, onOpenConsultation }: Navbar
           {/* Zone 1: Single text element wordmark */}
           <a
             href="#"
-            className="text-xl font-bold tracking-tight text-white whitespace-nowrap shrink-0 hover:text-blue-400 transition-colors flex items-center"
+            className="text-lg sm:text-xl font-bold tracking-tight text-white whitespace-nowrap shrink-0 hover:text-blue-400 transition-colors flex items-center"
           >
-            <span>Kinetik</span>
-            <span className="text-blue-500 font-black">.</span>
+            <span>Laudya</span>
+            <span className="text-blue-500 font-extrabold ml-1">Kanzora.</span>
           </a>
 
           {/* Zone 2: 4-5 clean single-line text navigation links */}

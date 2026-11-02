@@ -37,8 +37,8 @@ export function ContactSection({ currentLang, prefillEstimator }: ContactProps) 
         message:
           prev.message ||
           (currentLang === 'id'
-            ? `Halo tim Kinetik, saya ingin berkonsultasi mengenai proyek ${prefillEstimator.projectType} dengan estimasi durasi ${prefillEstimator.durationWeeks} minggu dan estimasi budget ${prefillEstimator.priceRange}. Fitur yang dibutuhkan: ${prefillEstimator.selectedFeatures.join(', ')}.`
-            : `Hello Kinetik team, I'd like to consult on an upcoming ${prefillEstimator.projectType} project with an estimated ${prefillEstimator.durationWeeks}-week sprint and budget range ${prefillEstimator.priceRange}. Selected features: ${prefillEstimator.selectedFeatures.join(', ')}.`),
+            ? `Halo Laudya, saya ingin berkonsultasi mengenai proyek ${prefillEstimator.projectType} dengan estimasi durasi ${prefillEstimator.durationWeeks} minggu dan estimasi budget ${prefillEstimator.priceRange}. Fitur yang dibutuhkan: ${prefillEstimator.selectedFeatures.join(', ')}.`
+            : `Hello Laudya, I'd like to consult on an upcoming ${prefillEstimator.projectType} project with an estimated ${prefillEstimator.durationWeeks}-week sprint and budget range ${prefillEstimator.priceRange}. Selected features: ${prefillEstimator.selectedFeatures.join(', ')}.`),
       }));
     }
   }, [prefillEstimator, currentLang]);
@@ -114,9 +114,9 @@ export function ContactSection({ currentLang, prefillEstimator }: ContactProps) 
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs text-neutral-400 font-medium">Email Resmi &amp; Proposal</div>
-                  <div className="text-sm font-bold text-white">hello@kinetikstudio.id</div>
-                  <div className="text-[11px] text-neutral-500 mt-0.5">Respons tercepat dalam 4 jam kerja</div>
+                  <div className="text-xs text-neutral-400 font-medium">Email Kontak Resmi</div>
+                  <div className="text-sm font-bold text-white">kanzoralaudya@gmail.com</div>
+                  <div className="text-[11px] text-neutral-500 mt-0.5">Respons cepat dalam 24 jam</div>
                 </div>
               </div>
 
@@ -125,7 +125,7 @@ export function ContactSection({ currentLang, prefillEstimator }: ContactProps) 
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs text-neutral-400 font-medium">WhatsApp Priority Line</div>
+                  <div className="text-xs text-neutral-400 font-medium">WhatsApp Direct Line</div>
                   <div className="text-sm font-bold text-white">+62 812-8899-7700</div>
                   <div className="text-[11px] text-neutral-500 mt-0.5">Senin - Jumat, 09:00 - 18:00 WIB</div>
                 </div>
@@ -136,9 +136,9 @@ export function ContactSection({ currentLang, prefillEstimator }: ContactProps) 
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs text-neutral-400 font-medium">Studio &amp; Kantor Rekayasa</div>
-                  <div className="text-sm font-bold text-white">SCBD District 8, Senopati</div>
-                  <div className="text-[11px] text-neutral-500 mt-0.5">Jakarta Selatan 12190, Indonesia</div>
+                  <div className="text-xs text-neutral-400 font-medium">Program Studi &amp; Domisili</div>
+                  <div className="text-sm font-bold text-white">Program Studi Sistem Informasi</div>
+                  <div className="text-[11px] text-neutral-500 mt-0.5">Indonesia · Terbuka untuk Kolaborasi Global</div>
                 </div>
               </div>
             </div>
